@@ -1,0 +1,554 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    tools:context="smartenergy.energyapp.MainActivity">
+
+
+    <Button
+        android:id="@+id/btnLeft"
+        style="Calender"
+        android:layout_width="253dp"
+        android:layout_height="62dp"
+        android:background="?attr/colorButtonNormal"
+        android:drawableStart="@mipmap/ic_calendar48"
+        android:paddingStart="50dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.2"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="@+id/btnMiddle"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <Button
+        android:id="@+id/btnRight"
+        style="Globe"
+        android:layout_width="215dp"
+        android:layout_height="62dp"
+        android:background="?attr/colorButtonNormal"
+        android:drawableStart="@mipmap/ic_earth48"
+        android:paddingStart="120dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.9"
+        app:layout_constraintLeft_toLeftOf="@+id/btnMiddle"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <Button
+        android:id="@+id/btnMiddle"
+        android:layout_width="91dp"
+        android:layout_height="91dp"
+        android:layout_marginBottom="-100dp"
+        android:background="@drawable/cast_abc_scrubber_control_to_pressed_mtrl_005"
+        android:backgroundTint="@color/place_autocomplete_search_hint"
+        android:checked="false"
+        android:drawableTint="@color/colorPrimary"
+        android:drawableTop="@mipmap/ic_footprint48"
+        android:padding="25dp"
+        android:paddingEnd="40dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Pick your current vehicle"
+                android:textAlignment="center"
+                android:textColor="@color/cast_expanded_controller_background_color"
+                android:textColorHighlight="@color/cast_expanded_controller_ad_label_background_color"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="78dp"
+                android:orientation="horizontal">
+
+                <ToggleButton
+
+                    android:id="@+id/tBtnAir"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="0dp"
+                    android:layout_marginRight="2dp"
+                    android:layout_weight="1"
+                    android:allowUndo="true"
+                    android:background="@mipmap/ic_airplanecircle"
+                    android:backgroundTint="@color/cast_expanded_controller_ad_container_white_stripe_color"
+                    android:drawableTop="@mipmap/ic_airplanecircle"
+                    android:paddingLeft="3dp"
+                    android:paddingRight="3dp"
+                    android:text="ToggleButton"
+                    android:textOff="plane"
+                    android:textOn="plane"
+                    android:textSize="8sp" />
+
+
+                <ToggleButton
+                    android:id="@+id/tBtnBoat"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="3dp"
+                    android:layout_marginRight="3dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/cast_abc_scrubber_control_to_pressed_mtrl_000"
+                    android:backgroundTint="@color/cast_expanded_controller_ad_container_white_stripe_color"
+                    android:drawableTop="@mipmap/ic_boatcircle"
+                    android:paddingLeft="1dp"
+                    android:paddingRight="1dp"
+                    android:text="ToggleButton"
+                    android:textOff="Boat"
+                    android:textOn="Boat"
+                    android:textSize="8sp" />
+
+                <ToggleButton
+                    android:id="@+id/tBtnCar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="3dp"
+                    android:layout_marginRight="3dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/cast_abc_scrubber_control_to_pressed_mtrl_000"
+                    android:backgroundTint="@color/cast_expanded_controller_ad_container_white_stripe_color"
+                    android:drawableTop="@mipmap/ic_carcircle"
+                    android:paddingLeft="1dp"
+                    android:paddingRight="1dp"
+                    android:text="ToggleButton"
+                    android:textOff="Car"
+                    android:textOn="Car"
+                    android:textSize="8sp" />
+
+                <ToggleButton
+                    android:id="@+id/tBtnBus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="3dp"
+                    android:layout_marginRight="3dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/cast_abc_scrubber_control_to_pressed_mtrl_000"
+                    android:backgroundTint="@color/cast_expanded_controller_ad_container_white_stripe_color"
+                    android:drawableTop="@mipmap/ic_buscircle"
+                    android:paddingLeft="1dp"
+                    android:paddingRight="1dp"
+                    android:text="ToggleButton"
+                    android:textOff="Bus"
+                    android:textOn="Bus"
+                    android:textSize="8sp" />
+
+                <ToggleButton
+                    android:id="@+id/tBtnTram"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="3dp"
+                    android:layout_marginRight="3dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/cast_abc_scrubber_control_to_pressed_mtrl_000"
+                    android:backgroundTint="@color/cast_expanded_controller_ad_container_white_stripe_color"
+                    android:drawableTop="@mipmap/ic_tramwaycircle"
+                    android:paddingLeft="1dp"
+                    android:paddingRight="1dp"
+                    android:text="ToggleButton"
+                    android:textOff="Tram"
+                    android:textOn="Tram"
+                    android:textSize="8sp" />
+
+                <ToggleButton
+                    android:id="@+id/tBtnTrain"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="3dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/cast_abc_scrubber_control_to_pressed_mtrl_000"
+                    android:backgroundTint="@color/cast_expanded_controller_ad_container_white_stripe_color"
+                    android:drawableTop="@mipmap/ic_traincircle"
+                    android:paddingLeft="1dp"
+                    android:paddingRight="1dp"
+                    android:text="ToggleButton"
+                    android:textOff="Train"
+                    android:textOn="Train"
+                    android:textSize="8sp" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="368dp"
+                android:layout_height="1dp"
+                android:background="@android:color/holo_green_dark"
+                tools:layout_editor_absoluteX="8dp"
+                tools:layout_editor_absoluteY="0dp" />
+
+
+            <RelativeLayout
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:layout_marginLeft="90dp"
+                android:paddingBottom="0dp">
+
+                <ProgressBar
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_centerInParent="true"
+                    android:indeterminate="false"
+                    android:max="100"
+                    android:progress="100"
+                    android:progressDrawable="@drawable/circle_progress_background" />
+
+                <ProgressBar
+                    android:id="@+id/circle_progress_bar"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:indeterminate="false"
+                    android:max="100"
+                    android:progressDrawable="@drawable/circle_progress_foreground"
+                    android:rotation="-90" />
+
+                <TextView
+                    android:id="@+id/tvPercent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:text="TextView"
+                    android:textAlignment="center"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="30sp" />
+
+                <TextView
+                    android:id="@+id/tvPercentInfo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:paddingBottom="10dp"
+                    android:text="compared to average CO\u2082 use" />
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="368dp"
+                android:layout_height="1dp"
+                android:layout_marginTop="20dp"
+                android:background="@android:color/holo_green_dark"
+                android:paddingTop="20dp"
+                tools:layout_editor_absoluteX="8dp"
+                tools:layout_editor_absoluteY="0dp" />
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="293dp"
+                android:paddingTop="0dp">
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="25dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="4dp"
+                        android:paddingRight="10dp"
+                        android:text=" " />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:text=" Distance [km] " />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:text=" Gasoline [ml] " />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:text=" CO\u2082 emmited [g] " />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="25dp">
+
+                    <TextView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:background="@mipmap/ic_walk48" />
+
+                    <TextView
+                        android:id="@+id/tvDisWalk"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="TextView"
+                        android:textAlignment="center" />
+
+                    <TextView
+                        android:id="@+id/tvEnergyWalk"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="TextView"
+                        android:textAlignment="center" />
+
+                    <TextView
+                        android:id="@+id/tvCO2Walk"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="TextView"
+                        android:textAlignment="center" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="25dp">
+
+                    <TextView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:background="@mipmap/ic_cycle48" />
+
+                    <TextView
+                        android:id="@+id/tvDisCycle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="TextView"
+                        android:textAlignment="center" />
+
+                    <TextView
+                        android:id="@+id/tvEnergyCycle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="TextView"
+                        android:textAlignment="center" />
+
+                    <TextView
+                        android:id="@+id/tvCO2Cycle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="TextView"
+                        android:textAlignment="center" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="25dp">
+
+                    <TextView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:background="@mipmap/ic_tram48" />
+
+                    <TextView
+                        android:id="@+id/tvDisTram"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="TextView"
+                        android:textAlignment="center" />
+
+                    <TextView
+                        android:id="@+id/tvEnergyTram"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="TextView"
+                        android:textAlignment="center" />
+
+                    <TextView
+                        android:id="@+id/tvCO2Tram"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="TextView"
+                        android:textAlignment="center" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="25dp">
+
+                    <TextView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:background="@mipmap/ic_train48" />
+
+                    <TextView
+                        android:id="@+id/tvDisTrain"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="TextView"
+                        android:textAlignment="center" />
+
+                    <TextView
+                        android:id="@+id/tvEnergyTrain"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="TextView"
+                        android:textAlignment="center" />
+
+                    <TextView
+                        android:id="@+id/tvCO2Train"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="TextView"
+                        android:textAlignment="center" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="25dp">
+
+                    <TextView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:background="@mipmap/ic_bus48" />
+
+                    <TextView
+                        android:id="@+id/tvDisBus"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="TextView"
+                        android:textAlignment="center" />
+
+                    <TextView
+                        android:id="@+id/tvEnergyBus"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="TextView"
+                        android:textAlignment="center" />
+
+                    <TextView
+                        android:id="@+id/tvCO2Bus"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="TextView"
+                        android:textAlignment="center" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="25dp">
+
+                    <TextView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:background="@mipmap/ic_car48" />
+
+                    <TextView
+                        android:id="@+id/tvDisCar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="TextView"
+                        android:textAlignment="center" />
+
+                    <TextView
+                        android:id="@+id/tvEnergyCar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="TextView"
+                        android:textAlignment="center" />
+
+                    <TextView
+                        android:id="@+id/tvCO2Car"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="TextView"
+                        android:textAlignment="center" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="25dp">
+
+                    <TextView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:background="@mipmap/ic_boat48" />
+
+                    <TextView
+                        android:id="@+id/tvDisBoat"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="TextView"
+                        android:textAlignment="center" />
+
+                    <TextView
+                        android:id="@+id/tvEnergyBoat"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="TextView"
+                        android:textAlignment="center" />
+
+                    <TextView
+                        android:id="@+id/tvCO2Boat"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="TextView"
+                        android:textAlignment="center" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="25dp">
+
+                    <TextView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:background="@mipmap/ic_airplane48" />
+
+                    <TextView
+                        android:id="@+id/tvDisAir"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="TextView"
+                        android:textAlignment="center" />
+
+                    <TextView
+                        android:id="@+id/tvEnergyAir"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="TextView"
+                        android:textAlignment="center" />
+
+                    <TextView
+                        android:id="@+id/tvCO2Air"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="TextView"
+                        android:textAlignment="center" />
+                </TableRow>
+            </TableLayout>
+
+
+        </LinearLayout>
+    </ScrollView>
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="20dp" />
+
+
+</android.support.constraint.ConstraintLayout>

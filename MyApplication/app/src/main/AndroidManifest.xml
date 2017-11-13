@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="smartenergy.energyapp">
+
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="com.google.android.gms.permission.ACTIVITY_RECOGNITION" />
+
+    <permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_footprint48"
+        android:label="Carbon Footprint"
+        android:roundIcon="@mipmap/ic_footprint48"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".MainActivity"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <service
+            android:name=".SamplerService"
+            android:enabled="true"
+            android:exported="true"
+            android:icon="@drawable/ic_media_play_light"
+            android:label="@string/app_name" />
+        <service
+            android:name=".ActivityRecService"
+            android:enabled="true"
+            android:exported="true" />
+
+        <activity
+            android:name=".CalenderActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".GlobeActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".MonthlyFootprintActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".YearlyFootprintActivity"
+            android:screenOrientation="portrait" />
+
+        <service
+            android:name=".RefreshDbService"
+            android:enabled="true"
+            android:exported="true"></service>
+    </application>
+
+</manifest>

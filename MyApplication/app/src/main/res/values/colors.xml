@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#33853e</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#ff4081</color>
+    <color name="ourGreen">#33853E</color>
+    <color name="ourGreenLighter">#8ebc93</color>
+
+
+    <color name="white">#FFFFFF</color>
+    <color name="light_gray">#abbac2</color>
+    <color name="text_gray">#6B767D</color>
+    <color name="coral_blue">#1DAEFA</color>
+    <color name="dark_blue">#125D9D</color>
+    <color name="black">#000000</color>
+
+    <color name="circleProgressCompleteStartGradient">@color/ourGreen</color>
+    <color name="circleProgressCompleteEndGradient">@color/ourGreenLighter</color>
+    <color name="circleProgressIncompleteStartGradient">@color/light_gray</color>
+    <color name="circleProgressIncompleteEndGradient">@color/light_gray</color>
+
+</resources>
